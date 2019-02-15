@@ -11,8 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-FROM golang:1.10.0
+FROM golang:1.11.5
 RUN go get github.com/codegangsta/negroni \
            github.com/gorilla/mux \
            github.com/xyproto/simpleredis \
@@ -25,6 +24,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -o main .
 
 FROM scratch
 WORKDIR /app
+COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=0 /app/main .
 COPY ./public/index.html public/index.html
 COPY ./public/script.js public/script.js
