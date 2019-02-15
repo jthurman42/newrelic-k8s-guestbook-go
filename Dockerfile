@@ -29,5 +29,5 @@ COPY --from=0 /app/main .
 COPY ./public/index.html public/index.html
 COPY ./public/script.js public/script.js
 COPY ./public/style.css public/style.css
-CMD ["/app/main"]
+CMD ["/app/main", "-redis", "redis-server:6379", "-redisslave", "redis-slave:6379", "-nrkey", "1944ed1bf0fa31f134fffbfaf64f32dccb01226e"]
 EXPOSE 3000
