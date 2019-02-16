@@ -81,7 +81,7 @@ func EnvHandler(rw http.ResponseWriter, req *http.Request) {
 
 func HandleError(result interface{}, err error) (r interface{}) {
 	if err != nil {
-		panic(err)
+		log.Error(err)
 	}
 	return result
 }
