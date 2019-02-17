@@ -22,7 +22,8 @@
             "containers":[
                {
                   "name":"guestbook",
-                  "image":"k8s.gcr.io/guestbook:v3",
+                  "image":"wreckedreddocker/newrelic-k8s-guestbook-go:0.0.6",
+                  "args": ["-nrkey", "nrkey-goes-here"],
                   "ports":[
                      {
                         "name":"http-server",

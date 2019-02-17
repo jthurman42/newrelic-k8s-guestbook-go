@@ -29,5 +29,6 @@ COPY --from=0 /app/main .
 COPY ./public/index.html public/index.html
 COPY ./public/script.js public/script.js
 COPY ./public/style.css public/style.css
-CMD ["/app/main"]
+ENTRYPOINT ["/app/main"]
+CMD ["main"]
 EXPOSE 3000
