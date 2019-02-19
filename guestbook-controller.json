@@ -22,7 +22,7 @@
             "containers":[
                {
                   "name":"guestbook",
-                  "image":"wreckedreddocker/newrelic-k8s-guestbook-go:0.0.6",
+                  "image":"wreckedreddocker/newrelic-k8s-guestbook-go:0.0.8",
                   "args": ["-nrkey", "nrkey-goes-here"],
                   "ports":[
                      {
