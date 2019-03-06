@@ -1,0 +1,138 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "dvabztWVQX8f6oMLRyv4dLH+TGY=",
+			"origin": "github.com/stretchr/testify/vendor/github.com/davecgh/go-spew/spew",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "04af85275a5c7ac09d16bb3b9b2e751ed45154e5",
+			"revisionTime": "2018-10-09T18:43:15Z"
+		},
+		{
+			"checksumSHA1": "w3QCCIYHgZzIXQ+xTl7oLfFrXHs=",
+			"origin": "github.com/xyproto/simpleredis/vendor/github.com/gomodule/redigo/internal",
+			"path": "github.com/gomodule/redigo/internal",
+			"revision": "f2c3a2cf62d069ecdc9b49bd1512cefac318e33d",
+			"revisionTime": "2018-10-04T13:14:23Z"
+		},
+		{
+			"checksumSHA1": "HgOVOUtWUYHcNe8aipwuEZ7YLow=",
+			"origin": "github.com/xyproto/simpleredis/vendor/github.com/gomodule/redigo/redis",
+			"path": "github.com/gomodule/redigo/redis",
+			"revision": "f2c3a2cf62d069ecdc9b49bd1512cefac318e33d",
+			"revisionTime": "2018-10-04T13:14:23Z"
+		},
+		{
+			"checksumSHA1": "g/V4qrXjUGG9B+e3hB+4NAYJ5Gs=",
+			"path": "github.com/gorilla/context",
+			"revision": "08b5f424b9271eedf6f9f0ce86cb9396ed337a42",
+			"revisionTime": "2016-08-17T18:46:32Z"
+		},
+		{
+			"checksumSHA1": "hIbmXmNbwyP44fi1hh6zJrMcYws=",
+			"path": "github.com/gorilla/mux",
+			"revision": "ac112f7d75a0714af1bd86ab17749b31f7809640",
+			"revisionTime": "2017-07-03T15:07:09Z"
+		},
+		{
+			"checksumSHA1": "wUH5SD5GD4zv2Q2e+9RJkJC8qxg=",
+			"path": "github.com/newrelic/go-agent",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "aCnN1mCEGDKSLY8CqNzdKghtfbY=",
+			"path": "github.com/newrelic/go-agent/_integrations/nrgorilla/v1",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "IXrIWyJEa93VHQuZHO35Fk2CAj4=",
+			"path": "github.com/newrelic/go-agent/internal",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "vIJ3Ks0FTwtzyWrLR9hCh3eo0Mw=",
+			"path": "github.com/newrelic/go-agent/internal/cat",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "mkbupMdy+cF7xyo8xW0A6Bq15k4=",
+			"path": "github.com/newrelic/go-agent/internal/jsonx",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "ywxlVKtGArJ2vDfH1rAqEFwSGds=",
+			"path": "github.com/newrelic/go-agent/internal/logger",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "UrKUDjmw5vdff+izBrdZRiChPSI=",
+			"path": "github.com/newrelic/go-agent/internal/sysinfo",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "6sBTISkw0iEuWhYG9nJSPuvT4tU=",
+			"path": "github.com/newrelic/go-agent/internal/utilization",
+			"revision": "46d73e6be8b4faeee70850d0df829e4fe00d6819",
+			"revisionTime": "2018-08-28T16:38:49Z"
+		},
+		{
+			"checksumSHA1": "LuFv4/jlrmFNnDb/5SCSEPAM9vU=",
+			"origin": "github.com/stretchr/testify/vendor/github.com/pmezard/go-difflib/difflib",
+			"path": "github.com/pmezard/go-difflib/difflib",
+			"revision": "04af85275a5c7ac09d16bb3b9b2e751ed45154e5",
+			"revisionTime": "2018-10-09T18:43:15Z"
+		},
+		{
+			"checksumSHA1": "BYvROBsiyAXK4sq6yhDe8RgT4LM=",
+			"path": "github.com/sirupsen/logrus",
+			"revision": "89742aefa4b206dcf400792f3bd35b542998eb3b",
+			"revisionTime": "2017-08-22T13:27:46Z"
+		},
+		{
+			"checksumSHA1": "v3LEmqP4Cb6qGCIP7mJk7l2ZXw8=",
+			"path": "github.com/stretchr/testify/assert",
+			"revision": "04af85275a5c7ac09d16bb3b9b2e751ed45154e5",
+			"revisionTime": "2018-10-09T18:43:15Z"
+		},
+		{
+			"checksumSHA1": "Q8YGljnqlyH9fHCTgMY4YCKS80k=",
+			"origin": "github.com/xyproto/simpleredis/vendor/github.com/xyproto/pinterface",
+			"path": "github.com/xyproto/pinterface",
+			"revision": "f2c3a2cf62d069ecdc9b49bd1512cefac318e33d",
+			"revisionTime": "2018-10-04T13:14:23Z"
+		},
+		{
+			"checksumSHA1": "2OCzs9f5cVB7Po97FZcg7U+F+xU=",
+			"path": "github.com/xyproto/simpleredis",
+			"revision": "f2c3a2cf62d069ecdc9b49bd1512cefac318e33d",
+			"revisionTime": "2018-10-04T13:14:23Z"
+		},
+		{
+			"checksumSHA1": "nqWNlnMmVpt628zzvyo6Yv2CX5Q=",
+			"path": "golang.org/x/crypto/ssh/terminal",
+			"revision": "9419663f5a44be8b34ca85f08abc5fe1be11f8a3",
+			"revisionTime": "2017-09-30T17:45:11Z"
+		},
+		{
+			"checksumSHA1": "BInQpkMlU5kTyjhUHjbvRIKz2EE=",
+			"path": "golang.org/x/sys/unix",
+			"revision": "41f3e6584952bb034a481797859f6ab34b6803bd",
+			"revisionTime": "2019-02-04T12:38:20Z"
+		},
+		{
+			"checksumSHA1": "IwB9A6UjgGYrHIBFJEamnrXPeNo=",
+			"path": "golang.org/x/sys/windows",
+			"revision": "41f3e6584952bb034a481797859f6ab34b6803bd",
+			"revisionTime": "2019-02-04T12:38:20Z"
+		}
+	],
+	"rootPath": "github.com/jthurman42/newrelic-k8s-guestbook-go"
+}

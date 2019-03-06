@@ -11,24 +11,20 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-FROM golang:1.11.5
-RUN go get github.com/codegangsta/negroni \
-           github.com/gorilla/mux \
-           github.com/xyproto/simpleredis \
-           github.com/newrelic/go-agent \
-           github.com/sirupsen/logrus
+FROM golang:1.12.0
+RUN go get -u -v github.com/kardianos/govendor
 
-WORKDIR /app
-ADD ./main.go .
-RUN CGO_ENABLED=0 GOOS=linux go build -o main .
+RUN mkdir -p /go/src/app
+ADD . /go/src/app
+
+WORKDIR /go/src/app
+RUN CGO_ENABLED=0 GOOS=linux make compile-only
 
 FROM scratch
 WORKDIR /app
 COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
-COPY --from=0 /app/main .
-COPY ./public/index.html public/index.html
-COPY ./public/script.js public/script.js
-COPY ./public/style.css public/style.css
-ENTRYPOINT ["/app/main"]
-CMD ["main"]
+COPY --from=0 /go/src/app/bin/ .
+COPY assets/ .
+ENTRYPOINT ["/app/guestbook"]
+CMD ["guestbook"]
 EXPOSE 3000
