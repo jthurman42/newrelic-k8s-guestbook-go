@@ -15,8 +15,8 @@ func TestLogIfError(t *testing.T) {
 	assert.Equal(t, 1, logIfError(1, nil))
 
 	// Error, no data, returns nil
-	assert.Nil(t, logIfError(nil, errors.New("Test Error")))
+	assert.Nil(t, logIfError(nil, errors.New("test Error")))
 
 	// Error, data, returns data
-	assert.Equal(t, "asdf", logIfError("asdf", errors.New("Test Error with data")))
+	assert.Equal(t, "asdf", logIfError("asdf", errors.New("test Error with data")))
 }

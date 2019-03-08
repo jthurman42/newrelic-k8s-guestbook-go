@@ -12,6 +12,12 @@ import (
 
 // ListRangeHandler ...
 func ListRangeHandler(rw http.ResponseWriter, req *http.Request) {
+	if chance(slowChance) {
+		randomSleep(maxSlowdownMs)
+	} else if chance(errorChance) {
+		return
+	}
+
 	key := mux.Vars(req)["key"]
 	list := simpleredis.NewList(slavePool, key)
 	members := logIfError(list.GetAll()).([]string)

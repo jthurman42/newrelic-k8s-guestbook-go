@@ -9,17 +9,17 @@ SRCDIR       ?= .
 BUILD_DIR    := ./bin/
 COVERAGE_DIR := ./coverage/
 GOTOOLS       = github.com/kardianos/govendor \
-                gopkg.in/alecthomas/gometalinter.v2 \
                 github.com/axw/gocov/gocov \
                 github.com/AlekSi/gocov-xml \
                 github.com/stretchr/testify/assert \
                 github.com/robertkrimen/godocdown/godocdown \
+                github.com/golangci/golangci-lint/cmd/golangci-lint \
 
 
-GO           = govendor
-GODOC        = godocdown
-GOMETALINTER = gometalinter.v2
-GOVENDOR     = govendor
+GO       = govendor
+GODOC    = godocdown
+LINTER   = golangci-lint
+GOVENDOR = govendor
 
 # Determine packages by looking into pkg/*
 PACKAGES=$(wildcard ${SRCDIR}/pkg/*)
@@ -53,12 +53,10 @@ distclean: clean
 tools: check-version
 	@echo "=== $(PROJECT_NAME) === [ tools            ]: Installing tools required by the project..."
 	@$(GO) get -v -u $(GOTOOLS)
-	@$(GOMETALINTER) --install
 
 tools-update: check-version
 	@echo "=== $(PROJECT_NAME) === [ tools-update     ]: Updating tools required by the project..."
 	@$(GO) get -u $(GOTOOLS)
-	@$(GOMETALINTER) --install
 
 deps: tools deps-only
 
@@ -67,8 +65,8 @@ deps-only:
 	@$(GOVENDOR) sync
 
 validate: deps
-	@echo "=== $(PROJECT_NAME) === [ validate         ]: Validating source code running gometalinter..."
-	@$(GOMETALINTER) --config=.gometalinter.json ./...
+	@echo "=== $(PROJECT_NAME) === [ validate         ]: Validating source code running $(LINTER)..."
+	@$(LINTER) run ./...
 
 compile-only: deps-only
 	@echo "=== $(PROJECT_NAME) === [ compile          ]: building commands:"

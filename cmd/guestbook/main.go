@@ -15,7 +15,10 @@ import (
 )
 
 const (
-	appName = "GuestBook-Go-NewRelic"
+	errorChance   = 5.0
+	slowChance    = 10.0
+	maxSlowdownMs = 15
+	appName       = "GuestBook-Go-NewRelic"
 )
 
 var (
